@@ -199,10 +199,10 @@
             double total = 0;
 
             Console.Clear();
-            Console.WriteLine("=======================================================");
+            Console.WriteLine("\n===========================================================");
             Console.WriteLine("             LA TIENDITA");
-            Console.WriteLine("=======================================================");
-            Console.WriteLine($"{"Producto",-15} {"Cantidad",-15} {"Precio",-15} {"Subtotal",-15}");
+            Console.WriteLine("===========================================================");
+            Console.WriteLine($"{"Producto",-15} {"Cantidad",-15} {"Precio",-15} {"Subtotal",-5}");
             Console.WriteLine("-------------------------------------------------------");
 
             for (int i = 0; i < productos.Count; i++)
@@ -210,12 +210,12 @@
                 double subtotal = cantidades[i] * precios[i];
                 total += subtotal;
 
-                Console.WriteLine($"{productos[i],-15} {cantidades[i],-15} RD$ {precios[i],-15:F2} RD$ {subtotal,-15:F2}");
+                Console.WriteLine($"{productos[i],-15} {cantidades[i],-15} RD$ {precios[i],-10:F2} RD$ {subtotal:F2}");
             }
 
-            Console.WriteLine("-------------------------------------------------------");
-            Console.WriteLine($"{"TOTAL:",-35} RD$ {total:F2}");
-            Console.WriteLine("=======================================================");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine($"{"TOTAL:",-40} RD$ {total:F2}");
+            Console.WriteLine("============================================================");
 
             Console.WriteLine("\n¡Gracias por su compra!");
             Console.ReadKey();
